@@ -10,61 +10,43 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #fbeae5;
+            background: linear-gradient(135deg, #fbeae5, #ffcccb);
             color: #333;
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
             text-align: center;
-            overflow: hidden; /* Disable scrolling */
+            overflow: hidden;
         }
         .container {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 60px;
             border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
             margin: 0 auto;
-            border: 2px solid #ff5e78; /* Border untuk kontainer */
         }
         h1 {
             color: #ff5e78;
-            font-size: 36px; /* Ukuran font yang lebih besar */
-            margin-bottom: 20px; /* Spasi bawah */
+            font-size: 48px;
+            margin: 0 0 20px;
         }
         p {
-            font-size: 18px; /* Ukuran font yang lebih besar */
+            font-size: 24px;
             line-height: 1.6;
-            margin: 10px 0; /* Spasi atas dan bawah */
+            margin: 10px 0;
         }
         .heart {
-            font-size: 60px; /* Ukuran hati yang lebih besar */
+            font-size: 80px;
             color: #ff5e78;
             animation: beat 1s infinite;
-            margin: 20px 0; /* Spasi atas dan bawah hati */
+            margin: 20px 0;
         }
         @keyframes beat {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.2); }
         }
         audio {
-            display: none; /* Sembunyikan elemen audio */
-        }
-        /* Button untuk scroll */
-        .scroll-button {
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #ff5e78;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s;
-        }
-        .scroll-button:hover {
-            background-color: #ff3e58;
+            display: none;
         }
     </style>
 </head>
@@ -72,36 +54,21 @@
     <div class="container">
         <h1>Untuk Zahra</h1>
         <p>Hai Zahra,</p>
-        <p>Selamat tidur dan semoga mimpi indah!</p>
-        <p>Aku sangat bersyukur bisa bersamamu. Terima kasih untuk semua kenangan indah yang kita buat bersama. Kamu adalah alasan aku bahagia setiap hari.</p>
-        <p>Semoga hubungan kita selalu dipenuhi kebahagiaan dan cinta seperti ini.</p>
+        <p>Selamat tidur dan semoga mimpi indah! Aku sangat bersyukur bisa bersamamu. Terima kasih untuk semua kenangan indah yang kita buat bersama. Kamu adalah alasan aku bahagia setiap hari. Semoga hubungan kita selalu dipenuhi kebahagiaan seperti ini.</p>
         <p class="heart">❤️</p>
         <p>Selamat tidur, sayang. Aku sayang kamu!<br> - Fathir</p>
         
-        <!-- Audio player for MP3 -->
         <audio id="audio" autoplay loop>
             <source src="https://keepfiles.xyz/uploads/music/2024/05/Arctic-Monkeys-I-Wanna-Be-Yours-(RawPraise.ng).mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
-
-        <!-- Scroll button -->
-        <button class="scroll-button" onclick="scrollToTop()">Kembali ke Atas</button>
     </div>
-    
+
     <script>
-        // Play audio automatically when the page loads
         window.onload = function() {
             const audio = document.getElementById('audio');
             audio.play();
         };
-
-        // Scroll function
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
     </script>
 </body>
 </html>
