@@ -8,7 +8,7 @@
         body {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             height: 100vh;
             background-color: #fbeae5;
             color: #333;
@@ -16,7 +16,7 @@
             text-align: center;
             margin: 0;
             padding: 20px;
-            overflow: hidden;
+            overflow: auto; /* Enable scrolling */
         }
         .container {
             background: #fff;
@@ -24,6 +24,7 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             max-width: 600px;
+            margin: 0 auto; /* Center container */
         }
         h1 {
             color: #ff5e78;
@@ -44,13 +45,9 @@
         iframe {
             margin-top: 20px;
             width: 100%;
-            height: 0; /* Hide iframe height */
+            height: 380px; /* Height of Spotify embed */
             border: none;
             border-radius: 10px;
-            overflow: hidden;
-        }
-        .hidden {
-            height: 315px; /* Show height on autoplay */
         }
     </style>
 </head>
@@ -62,15 +59,8 @@
         <p class="heart">❤️</p>
         <p>Selamat tidur, sayang. Aku sayang kamu!<br> - Fathir</p>
         
-        <!-- Embed video YouTube -->
-        <iframe id="video" class="hidden" src="https://www.youtube.com/embed/tGv7CUutzqU?autoplay=1&loop=1&playlist=tGv7CUutzqU&controls=0&showinfo=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <!-- Embed Spotify song -->
+        <iframe src="https://open.spotify.com/embed/track/5XeFesFbtLpXzIVDNQP22n" allow="encrypted-media" allowfullscreen></iframe>
     </div>
-    
-    <script>
-        // Function to show the video when the page loads
-        window.onload = function() {
-            document.getElementById("video").classList.remove("hidden");
-        };
-    </script>
 </body>
 </html>
