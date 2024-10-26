@@ -12,11 +12,11 @@
             height: 100vh;
             background-color: #fbeae5;
             color: #333;
-            font-family: Arial, sans-serif;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
             margin: 0;
             padding: 20px;
-            overflow: auto; /* Enable scrolling */
+            overflow: auto;
         }
         .container {
             background: #fff;
@@ -24,19 +24,24 @@
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             max-width: 600px;
-            margin: 0 auto; /* Center container */
+            margin: 0 auto;
+            border: 2px solid #ff5e78; /* Border untuk kontainer */
         }
         h1 {
             color: #ff5e78;
+            font-size: 36px; /* Ukuran font yang lebih besar */
+            margin-bottom: 20px; /* Spasi bawah */
         }
         p {
-            font-size: 18px;
+            font-size: 20px; /* Ukuran font yang lebih besar */
             line-height: 1.6;
+            margin: 10px 0; /* Spasi atas dan bawah */
         }
         .heart {
-            font-size: 30px;
+            font-size: 40px; /* Ukuran hati yang lebih besar */
             color: #ff5e78;
             animation: beat 1s infinite;
+            margin: 20px 0; /* Spasi atas dan bawah hati */
         }
         @keyframes beat {
             0%, 100% { transform: scale(1); }
@@ -45,7 +50,7 @@
         iframe {
             margin-top: 20px;
             width: 100%;
-            height: 380px; /* Height of Spotify embed */
+            height: 200px; /* Tinggi pemutar SoundCloud */
             border: none;
             border-radius: 10px;
         }
@@ -55,12 +60,14 @@
     <div class="container">
         <h1>Untuk Zahra</h1>
         <p>Hai Zahra,</p>
-        <p>Selamat tidur dan semoga mimpi indah! Aku sangat bersyukur bisa bersamamu. Terima kasih untuk semua kenangan indah yang kita buat bersama. Kamu adalah alasan aku bahagia setiap hari. Semoga hubungan kita selalu dipenuhi kebahagiaan seperti ini.</p>
+        <p>Selamat tidur dan semoga mimpi indah!</p>
+        <p>Aku sangat bersyukur bisa bersamamu. Terima kasih untuk semua kenangan indah yang kita buat bersama. Kamu adalah alasan aku bahagia setiap hari.</p>
+        <p>Semoga hubungan kita selalu dipenuhi kebahagiaan dan cinta seperti ini.</p>
         <p class="heart">❤️</p>
         <p>Selamat tidur, sayang. Aku sayang kamu!<br> - Fathir</p>
         
-        <!-- Embed Spotify song -->
-        <iframe src="https://open.spotify.com/embed/track/5XeFesFbtLpXzIVDNQP22n" allow="encrypted-media" allowfullscreen></iframe>
+        <!-- Embed SoundCloud song -->
+        <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1516322379&color=%23ff5e78&auto_play=true&show_user=true&show_reposts=false" allow="autoplay" allowfullscreen></iframe>
     </div>
 </body>
 </html>
