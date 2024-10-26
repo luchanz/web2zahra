@@ -6,9 +6,10 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   color: #333;
-  background-color: #f4f4f9;
+  background-color: #fff0f6;
+  line-height: 1.6;
 }
 
 /* Hero Section */
@@ -16,42 +17,75 @@ body {
   background: url('path_to_hero_image.jpg') center/cover no-repeat;
   color: #fff;
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 3.5rem;
+  color: #ffcccb;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: auto;
+  font-size: 1.3rem;
+  color: #f5f5f5;
+}
+
+.heart {
+  font-size: 2rem;
+  color: #ff69b4;
+  animation: bounce 1.5s infinite;
+}
+
+/* Keyframes for heart animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* About Section */
 #about {
-  background-color: #fff;
+  background-color: #ffe4e1;
   padding: 60px 20px;
   text-align: center;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 700px;
 }
 
 #about h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #ff1493;
   margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.2rem;
+  color: #333;
 }
 
 /* Gallery Section */
 #gallery {
   padding: 60px 20px;
-  background-color: #fafafa;
+  background-color: #fffaf0;
+  text-align: center;
 }
 
 #gallery h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #ff69b4;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .gallery-container {
@@ -63,31 +97,42 @@ body {
 .gallery-container img {
   width: 100%;
   max-width: 250px;
-  border-radius: 8px;
-  transition: transform 0.3s;
+  border-radius: 15px;
+  border: 3px solid #ffb6c1;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .gallery-container img:hover {
   transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 182, 193, 0.6);
 }
 
 /* Contact Section */
 #contact {
-  background-color: #fff;
+  background-color: #ffe4e1;
   padding: 60px 20px;
   text-align: center;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  color: #ff69b4;
 }
 
 #contact a {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #0073e6;
+  background-color: #ff69b4;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 20px;
+  font-weight: bold;
 }
 
 #contact a:hover {
-  background-color: #005bb5;
+  background-color: #ff1493;
 }
