@@ -1,78 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untuk Zahra</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #fbeae5, #ffcccb);
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow-y: scroll; /* Memungkinkan scroll ke atas dan ke bawah */
-        }
-        .container {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
-            margin: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #ff5e78;
-            font-size: 48px;
-            margin: 0 0 20px;
-        }
-        p {
-            font-size: 20px;
-            line-height: 1.5;
-            margin: 10px 0;
-            max-width: 500px; /* Membatasi lebar teks */
-        }
-        .heart {
-            font-size: 80px;
-            color: #ff5e78;
-            animation: beat 1s infinite;
-            margin: 20px 0;
-        }
-        @keyframes beat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-        audio {
-            display: none; /* Sembunyikan elemen audio */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zahra’s Special Page</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Untuk Zahra</h1>
-        <p>Hai Zahra,</p>
-        <p>Aku ingin mengucapkan selamat tidur yang terindah untukmu. Setiap malam, aku selalu berharap kamu mendapatkan mimpi indah dan bangun dengan senyuman yang lebih cerah dari matahari.</p>
-        <p>Kamu adalah cahaya dalam hidupku, seperti bintang yang bersinar di langit malam. Terima kasih sudah menjadi teman, sahabat, dan orang yang paling spesial dalam hidupku. Aku sangat bersyukur atas setiap momen yang kita habiskan bersama, setiap tawa yang kita bagi, dan setiap kenangan yang kita buat.</p>
-        <p>Rasa cintaku padamu seperti lautan yang dalam dan tak berbatas. Setiap hari, aku jatuh cinta lagi dan lagi, seperti saat kita pertama kali bertemu. Kamu membuat hariku lebih berwarna dan lebih berarti.</p>
-        <p>Semoga kita selalu bersama dan saling mendukung, meski dalam keadaan apapun. Kamu adalah alasanku untuk tersenyum, dan aku akan selalu ada untukmu.</p>
-        <p class="heart">❤️</p>
-        <p>Selamat tidur, sayang. Aku sayang kamu!<br> - Fathir</p>
-        
-        <audio id="audio" autoplay loop>
-            <source src="https://rawpraise.ng/arctic-monkeys-i-wanna-be-yours/audio" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
 
-    <script>
-        window.onload = function() {
-            const audio = document.getElementById('audio');
-            audio.play();
-        };
-    </script>
+  <!-- Section 1: Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>For Zahra</h1>
+      <p>A page made with love, celebrating every moment together.</p>
+    </div>
+  </section>
+
+  <!-- Section 2: About -->
+  <section id="about">
+    <h2>About Zahra</h2>
+    <p>Zahra, a joyful, kind-hearted soul, spreading happiness wherever she goes.</p>
+  </section>
+
+  <!-- Section 3: Gallery -->
+  <section id="gallery">
+    <h2>Memories</h2>
+    <div class="gallery-container">
+      <img src="path_to_img1.jpg" alt="Image 1">
+      <img src="path_to_img2.jpg" alt="Image 2">
+      <img src="path_to_img3.jpg" alt="Image 3">
+    </div>
+  </section>
+
+  <!-- Section 4: Contact -->
+  <section id="contact">
+    <h2>Stay Connected</h2>
+    <p>Follow on social media to keep up with more moments!</p>
+    <a href="https://instagram.com/zahra" target="_blank">Instagram</a>
+  </section>
+
 </body>
 </html>
