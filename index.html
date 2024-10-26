@@ -13,17 +13,18 @@
             background-color: #fbeae5;
             color: #333;
             font-family: 'Arial', sans-serif;
-            text-align: center;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            text-align: center;
             overflow: hidden; /* Disable scrolling */
         }
         .container {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
             margin: 0 auto;
             border: 2px solid #ff5e78; /* Border untuk kontainer */
         }
@@ -33,12 +34,12 @@
             margin-bottom: 20px; /* Spasi bawah */
         }
         p {
-            font-size: 20px; /* Ukuran font yang lebih besar */
+            font-size: 18px; /* Ukuran font yang lebih besar */
             line-height: 1.6;
             margin: 10px 0; /* Spasi atas dan bawah */
         }
         .heart {
-            font-size: 40px; /* Ukuran hati yang lebih besar */
+            font-size: 60px; /* Ukuran hati yang lebih besar */
             color: #ff5e78;
             animation: beat 1s infinite;
             margin: 20px 0; /* Spasi atas dan bawah hati */
@@ -49,6 +50,21 @@
         }
         audio {
             display: none; /* Sembunyikan elemen audio */
+        }
+        /* Button untuk scroll */
+        .scroll-button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #ff5e78;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .scroll-button:hover {
+            background-color: #ff3e58;
         }
     </style>
 </head>
@@ -67,6 +83,9 @@
             <source src="https://keepfiles.xyz/uploads/music/2024/05/Arctic-Monkeys-I-Wanna-Be-Yours-(RawPraise.ng).mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
+
+        <!-- Scroll button -->
+        <button class="scroll-button" onclick="scrollToTop()">Kembali ke Atas</button>
     </div>
     
     <script>
@@ -75,6 +94,14 @@
             const audio = document.getElementById('audio');
             audio.play();
         };
+
+        // Scroll function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
     </script>
 </body>
 </html>
