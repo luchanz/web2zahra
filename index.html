@@ -44,10 +44,13 @@
         iframe {
             margin-top: 20px;
             width: 100%;
-            height: 315px;
+            height: 0; /* Hide iframe height */
             border: none;
             border-radius: 10px;
             overflow: hidden;
+        }
+        .hidden {
+            height: 315px; /* Show height on autoplay */
         }
     </style>
 </head>
@@ -60,7 +63,14 @@
         <p>Selamat tidur, sayang. Aku sayang kamu!<br> - Fathir</p>
         
         <!-- Embed video YouTube -->
-        <iframe src="https://www.youtube.com/embed/tGv7CUutzqU?autoplay=1&loop=1&playlist=tGv7CUutzqU" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe id="video" class="hidden" src="https://www.youtube.com/embed/tGv7CUutzqU?autoplay=1&loop=1&playlist=tGv7CUutzqU&controls=0&showinfo=0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+    
+    <script>
+        // Function to show the video when the page loads
+        window.onload = function() {
+            document.getElementById("video").classList.remove("hidden");
+        };
+    </script>
 </body>
 </html>
